@@ -17,8 +17,7 @@ class AnnotateCommand extends Command {
 
     private static function loadAllClasses() {
         $app = app();
-        // foreach (array_merge(glob("{$app->path}/Models/*.php"), glob("{$app->path}/**/*.php")) as $classFileName) {
-        foreach (array_merge(glob("{$app->path}/Models/*.php")) as $classFileName) {
+        foreach (array_merge(glob("{$app->path}/Models/*.php"),glob("{$app->path}/Models/**/*.php"),glob("{$app->path}/Models/**/**/*.php")) as $classFileName) {
             /*
              * Put require_once statement into function body to limit too strange effects
              * (i. e. definition of global variables etc.):
