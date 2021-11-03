@@ -42,8 +42,15 @@ This package only works with MySQL for now.
 ```
 "require-dev": {
     ...
-    "fjf2002/model-annotation": "dev-master"
+    "hpcarlos/model_annotation": "dev-master",
 }
+...
+"repositories": {
+  "model_annotation": {
+      "type": "vcs",
+      "url": "https://github.com/hpcarlos/model-annotation-mysql.git"
+  }
+},
 ```
 
 - Run `composer update` to install newly added package
